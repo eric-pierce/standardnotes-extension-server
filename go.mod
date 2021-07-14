@@ -1,4 +1,4 @@
-module go.senan.xyz/standardnotes-extensions
+module github.com/eric-pierce/standardnotes-extension-server
 
 go 1.13
 
