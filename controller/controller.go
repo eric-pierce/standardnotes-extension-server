@@ -13,12 +13,12 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"go.senan.xyz/standardnotes-extensions/definition"
+	"github.com/eric-pierce/standardnotes-extension-server/definition"
 )
 
 var (
-	validUntil       = time.Date(2030, 0, 0, 0, 0, 0, 0, time.Local)
-	snExtRepo        = "https://github.com/sn-extensions"
+	validUntil       = time.Date(2100, 0, 0, 0, 0, 0, 0, time.Local)
+	snExtRepo        = "https://github.com/standardnotes/extensions"
 	regexpPackgeHash = regexp.MustCompile(`\/[0-9a-f]+\b`)
 )
 

@@ -1,29 +1,39 @@
-### standardnotes extensions server
+### Standardnotes Extensions Server
 
-- 30+ auto updating extensions for your standardnotes server
-- use activation code `https://extensions.your.domain/index.json`
+- Auto-updating extensions server for your self-hosted Standard Notes server
+- Currently 33 pre-configured open source extension repositories
 - pure go, no git subprocess
 
-### docker example
+### Usage
+
+- Open Extensions Tab
+- Use activation code `https://extensions.your.domain/index.json`
+
+### Docker Compose Example (Dockerhub Image)
 
 ```yaml
-services:
-  extensions:
-    build: path/to/this/repo
-    environment:
-    - SN_EXTS_LISTEN_ADDR=:80
-    - SN_EXTS_REPOS_DIR=/repos
-    - SN_EXTS_DEFINITIONS_DIR=/definitions
-    - SN_EXTS_BASE_URL=https://extensions.your.domain
-    - SN_EXTS_UPDATE_INTERVAL_MINS=4320 # 3 days
-    expose:
-    - 80
+  snext:
+    container_name: snext
+    image: ericpierce/standardnotes-extension-server
+    restart: unless-stopped
+    command: start-local
+    networks:
+      - traefik
+    ports:
+      - 8011:80
     volumes:
-    - ./extensions_repos:/repos
-  web:
-    ...
-  db:
-    ...
+      - $DOCKERDIR/snext:/repos
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      - TZ=$TZ
+      - PUID=$PUID
+      - PGID=$PGID
+      - SN_EXTS_LISTEN_ADDR=:80
+      - SN_EXTS_REPOS_DIR=/repos
+      - SN_EXTS_DEFINITIONS_DIR=/definitions
+      - SN_EXTS_BASE_URL=https://snext.$DOMAINNAME
+      - SN_EXTS_UPDATE_INTERVAL_MINS=4320 # 3 days
 ```
 
 ### screenshots
