@@ -9,8 +9,8 @@ import (
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	"github.com/eric-pierce/standardnotes-extension-server/controller"
-	"github.com/eric-pierce/standardnotes-extension-server/definition"
+	"github.com/eric-pierce/standardnotes-extension-server/tree/main/controller"
+	"github.com/eric-pierce/standardnotes-extension-server/tree/main/definition"
 )
 
 func mustEnv(key string) string {
