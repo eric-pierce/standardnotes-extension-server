@@ -1,0 +1,19 @@
+---
+id: com.standardnotes.slate-theme
+npm: sn-slate-theme
+repo_url: https://github.com/yithian/slate-theme.git
+index: dist/standard-notes.css
+
+name: Slate
+content_type: SN|Theme
+area: themes
+marketing_url: https://github.com/yithian/slate-theme
+thumbnail_url: https://raw.githubusercontent.com/yithian/slate-theme/main/images/sn-screenshot.png
+description: A theme with shady grey and mossy green highlights. Inspired by and compatable with the incredible Nord theme.
+
+dock_icon:
+  type: circle
+  background_color: '#F1F2F4'
+  foreground_color: '#F1F2F4'
+  border_color: '#353C40'
+...
