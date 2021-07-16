@@ -1,5 +1,5 @@
 ---
-id: de.danielilin.evernote-light-theme
+id: danielilin.evernote-light-theme
 npm: sn-evernote-light-theme
 repo_url: https://github.com/ilindaniel/sn-theme-evernote-light.git
 index: dist/dist.css
@@ -10,4 +10,10 @@ area: themes
 marketing_url: https://github.com/ilindaniel/sn-theme-evernote-light
 thumbnail_url: https://raw.githubusercontent.com/ilindaniel/sn-theme-evernote-light/master/preview.png
 description: This theme is inspired by colors of Evernote and heavily based on the gruvbox theme by Christian Hans.
+
+dock_icon:
+  type: circle
+  background_color: '#00a82e'
+  foreground_color: '#00a82e'
+  border_color: '#ffffff'
 ...
