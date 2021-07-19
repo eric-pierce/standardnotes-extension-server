@@ -1,7 +1,7 @@
 ### Standardnotes Extensions Server
 
 - Auto-updating extensions server for your self-hosted Standard Notes server
-- Currently 33 pre-configured open source extension repositories
+- Currently 34 pre-configured open source extension repositories
 - pure go, no git subprocess
 
 ### Usage
